@@ -1,0 +1,17 @@
+@use '../../../styles/variables' as var;
+
+.cart {
+  width: 24px;
+  height: 20px;
+  background: var.$color-white;
+  -webkit-mask-image: url('cart.svg');
+  mask-image: url('cart.svg');
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+
+  &:hover {
+    background: var.$gradient;
+  }
+}

@@ -1,0 +1,21 @@
+@use 'src/styles/variables' as var;
+
+.accordion {
+  &__summary {
+    list-style: none;
+    cursor: pointer;
+
+    &::-webkit-details-marker {
+      display: none;
+    }
+    &::after {
+      content: "Read more";
+      font-weight:  var.$fontBold;
+      color: var.$color-yellow;
+    }
+  }
+}
+
+.accordion[open] .accordion__summary::after {
+  content: "Read less";
+}

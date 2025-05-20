@@ -1,0 +1,17 @@
+@use 'variables' as var;
+
+%container {
+  max-width: var.$with-container;
+  width: 100%;
+  height: 100%;
+  padding-inline: 80px;
+  margin: 0 auto;
+
+  @media (max-width: var.$md) {
+    padding-inline: 30px;
+  }
+
+  @media (max-width: var.$sm) {
+    padding-inline: 20px;
+  }
+}

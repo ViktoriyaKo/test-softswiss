@@ -1,0 +1,32 @@
+@use 'src/styles/layout' as *;
+@use 'src/styles/variables' as var;
+@use 'src/styles/mixins' as mixin;
+
+.header {
+  background: var.$color-black;
+  height: var.$with-headerM;
+
+  &__nav {
+    @extend %container;
+    @include mixin.flex(space-between);
+  }
+
+  &__list {
+    @include mixin.flex(flex-start);
+    gap: 28px;
+  }
+
+  &__item {
+    color: var.$color-white;
+
+    &:hover {
+      background: var.$gradient;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+
+  @media (max-width: var.$sm) {
+    height: var.$with-headerS;
+  }
+}
