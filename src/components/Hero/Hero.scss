@@ -15,20 +15,50 @@
           center;
   height: var.$with-heroM;
 
+  @media (max-width: var.$md) {
+    height: var.$with-heroS;
+    background-size: 300px, cover, cover;
+    background-position:
+            125% 20%,
+            center,
+            center;
+  }
+
+  @media (max-width: var.$sm) {
+    background-position:
+            50% -100%,
+            center,
+            center;
+  }
+
   &__inner {
     @extend %container;
     @include mixin.flex(flex-start, flex-start);
     flex-direction: column;
     gap: var.$gapM;
     padding-block: 90px 120px;
+
+    @media (max-width: var.$md) {
+      padding-top: 100px;
+    }
   }
 
   &__title {
+    max-width: 75%;
     font-size: 72px;
     font-weight: var.$fontBold;
+    line-height: var.$lineHeight;
 
     &--highlight {
       color: var.$color-pink;
+    }
+
+    @media (max-width: var.$md) {
+      font-size: 48px;
+    }
+
+    @media (max-width: var.$sm) {
+      font-size: 36px;
     }
   }
 
@@ -38,6 +68,14 @@
 
     &--highlight {
       color: var.$color-yellow;
+    }
+
+    @media (max-width: var.$md) {
+      font-size: var.$fontSizeL;
+    }
+
+    @media (max-width: var.$sm) {
+      font-size: var.$fontSizeS;
     }
   }
 }

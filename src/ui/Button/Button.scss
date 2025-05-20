@@ -20,6 +20,11 @@
     padding: 12px 38px;
     border: 2px solid var.$color-yellow;
     color: var.$color-yellow;
+
+    @media (max-width: var.$md) {
+      font-size: var.$fontSizeS;
+      padding: 5px 38px;
+    }
   }
 
   &--link {

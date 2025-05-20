@@ -11,12 +11,25 @@
     @include mixin.flex(space-between);
   }
 
+  @media (max-width: var.$md) {
+    &__logo {
+      svg {
+        width: 70px;
+      }
+    }
+  }
+
   &__list {
     @include mixin.flex(flex-start);
     gap: 28px;
+    padding-inline: 12px;
   }
 
   &__item {
+    color: var.$color-white;
+    font-size: var.$fontSizeM;
+    padding: 12px 20px;
+
     &:hover {
       background: var.$gradient;
       -webkit-background-clip: text;

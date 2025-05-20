@@ -10,6 +10,7 @@
   mask-repeat: no-repeat;
   -webkit-mask-size: contain;
   mask-size: contain;
+  cursor: pointer;
 
   &:hover {
     background: var.$gradient;

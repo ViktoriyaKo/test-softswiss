@@ -6,32 +6,69 @@
   @extend %container;
   padding-top: 55px;
 
-  &__container {
-    display: grid;
-    gap: 40px;
-    padding-top: 40px;
-  }
-
   &__card {
-    @include mixin.flex(center, flex-start);
+    @include mixin.flex(flex-end, flex-start);
     padding: 36px;
     flex-direction: column;
     background-size: cover;
     background-position: center;
     gap: var.$gapM;
-    max-height: 350px;
-    height: 100%;
+    height: 350px;
     border-radius: var.$border-radiusS;
+
+    @media (max-width: var.$l) {
+      padding: 26px;
+    }
+
+    &-title {
+      font-size: 46px;
+      font-weight: var.$fontBold;
+      line-height: var.$lineHeight;
+
+      @media (max-width: var.$l) {
+        max-width: 250px;
+        font-size: 40px;
+      }
+    }
+
+    &-subtitle {
+      font-size: 24px;
+      font-weight: var.$fontBold;
+
+      @media (max-width: var.$l) {
+        font-size: var.$fontSizeS;
+      }
+    }
   }
 
-  &__title {
-    max-width: 50%;
-    font-size: 46px;
-    font-weight: var.$fontBold;
-  }
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    padding-top: 40px;
 
-  &__subtitle {
-    font-size: 24px;
-    font-weight: var.$fontBold;
+    @media (max-width: var.$l) {
+      gap: 30px;
+      padding-top: 30px;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+
+    .offers__card:first-child, .offers__card:last-child {
+      grid-column: span 2;
+
+      @media (max-width: var.$l) {
+        grid-column: span 1;
+      }
+    }
+
+    .offers__card:first-child .offers__card-title,
+    .offers__card:last-child .offers__card-title {
+      font-size: 74px;
+      max-width: 640px;
+
+      @media (max-width: var.$l) {
+        font-size: 40px;
+      }
+    }
   }
 }

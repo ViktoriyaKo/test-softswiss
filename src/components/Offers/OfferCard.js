@@ -6,8 +6,8 @@ const OfferCard = (props) => {
 
   return (
     <div className="offers__card" style={{ backgroundImage }}>
-      <h3 className="offers__title">{title}</h3>
-      <p className="offers__subtitle">{subtitle}</p>
+      <h3 className="offers__card-title">{title}</h3>
+      <p className="offers__card-subtitle">{subtitle}</p>
       <Button text={"Learn more"} variant={"outlined"} />
     </div>
   );

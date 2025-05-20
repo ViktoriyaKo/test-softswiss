@@ -1,25 +1,29 @@
 import "./Header.scss";
 import { CartIcon, LogoIcon } from "../../ui";
 
-// TODO add link!
+// added # instead of Link from "react-router-dom"
 
 const Header = () => {
   const navItems = [
-    { name: "Home", href: "/home" },
-    { name: "Products ", href: "/products" },
+    { name: "Home", href: "#" },
+    { name: "Products ", href: "#" },
   ];
 
   return (
     <header className="header">
       <nav className="header__nav">
-        <LogoIcon />
+        <a href={"#"} className="header__logo">
+          <LogoIcon />
+        </a>
 
         <ul className="header__list">
           {navItems.map((item) => {
             const { name, href } = item;
             return (
-              <li key={href} className="header__item">
-                {name}
+              <li key={name}>
+                <a className="header__item" href={href}>
+                  {name}
+                </a>
               </li>
             );
           })}
