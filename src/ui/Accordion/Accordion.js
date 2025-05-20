@@ -1,12 +1,12 @@
 import "./Accordion.scss";
 
 const Accordion = (props) => {
-  const { text } = props;
+  const { children } = props;
 
   return (
     <details className="accordion">
       <summary className="accordion__summary" />
-      <p>{text}</p>
+      {children}
     </details>
   );
 };

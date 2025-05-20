@@ -3,8 +3,8 @@
 @use 'src/styles/mixins' as mixin;
 
 .header {
-  background: var.$color-black;
-  height: var.$with-headerM;
+  background-color: var.$color-black;
+  height: var.$height-headerM;
 
   &__nav {
     @extend %container;
@@ -17,8 +17,6 @@
   }
 
   &__item {
-    color: var.$color-white;
-
     &:hover {
       background: var.$gradient;
       -webkit-background-clip: text;
@@ -27,6 +25,6 @@
   }
 
   @media (max-width: var.$sm) {
-    height: var.$with-headerS;
+    height: var.$height-headerS;
   }
 }

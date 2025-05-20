@@ -1,0 +1,24 @@
+@use 'variables' as var;
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var.$color-white;
+}
+
+h2 {
+  font-size: 32px;
+  font-weight: var.$fontBold;
+
+  @media (max-width: var.$md) {
+    font-size: 32px;
+  }
+
+  @media (max-width: var.$sm) {
+    font-size: var.$fontSizeM;
+  }
+}

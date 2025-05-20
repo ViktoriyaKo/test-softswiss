@@ -19,8 +19,7 @@
     @extend %container;
     @include mixin.flex(flex-start, flex-start);
     flex-direction: column;
-    gap: 22px;
-    color: var.$color-white;
+    gap: var.$gapM;
     padding-block: 90px 120px;
   }
 

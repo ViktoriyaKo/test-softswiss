@@ -1,0 +1,17 @@
+@use 'src/styles/layout' as *;
+@use 'src/styles/variables' as var;
+
+.journey {
+  @extend %container;
+  padding-block: 55px;
+
+  &__inner {
+    font-size: var.$fontSizeS;
+  }
+
+  &__description {
+    color: var.$color-white;
+    opacity: 0.6;
+    padding-block: 12px 20px;
+  }
+}

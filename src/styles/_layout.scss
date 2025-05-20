@@ -1,5 +1,9 @@
 @use 'variables' as var;
 
+body {
+  background-color: var.$color-background;
+}
+
 %container {
   max-width: var.$with-container;
   width: 100%;

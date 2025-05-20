@@ -1,0 +1,25 @@
+@use 'src/styles/layout' as *;
+@use 'src/styles/variables' as var;
+@use 'src/styles/mixins' as mixin;
+
+.footer {
+  background-color: var.$color-black;
+  height: var.$height-footer;
+
+  &__inner {
+    @extend %container;
+    @include mixin.flex(flex-start, center);
+    flex-direction: column;
+  }
+
+  &__title {
+    color: var.$color-yellow;
+    font-weight: var.$fontBold;
+    font-size: var.$fontSizeM;
+  }
+
+  &__image {
+    width: 93px;
+    height: 81px;
+  }
+}
