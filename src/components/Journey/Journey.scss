@@ -9,11 +9,19 @@
     padding-block: 55px;
   }
 
+  @media (max-width: var.$m) {
+    padding-block: 45px;
+  }
+
   &__inner {
     font-size: var.$fontSizeSM;
 
     @media (max-width: var.$md) {
       font-size: var.$fontSizeS;
+    }
+
+    @media (max-width: var.$m) {
+      font-size: var.$fontSizeXS;
     }
   }
 
@@ -23,5 +31,9 @@
     letter-spacing: 0.2px;
     opacity: 0.6;
     padding-block: 12px 20px;
+
+    @media (max-width: var.$m) {
+      padding-top: 24px;
+    }
   }
 }

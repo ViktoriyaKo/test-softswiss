@@ -7,6 +7,7 @@
   height: var.$height-headerM;
 
   &__nav {
+    position: relative;
     @extend %container;
     @include mixin.flex(space-between);
   }
@@ -23,6 +24,40 @@
     @include mixin.flex(flex-start);
     gap: 28px;
     padding-inline: 12px;
+
+    @media (max-width: var.$m) {
+      padding-block: 40px;
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
+
+  &__menu {
+    &-icon {
+      display: none;
+
+      @media (max-width: var.$m) {
+        z-index: 100;
+        display: block;
+      }
+    }
+
+    &-desktop {
+      @media (max-width: var.$m) {
+        display: none;
+      }
+    }
+  }
+
+  &__navbar {
+    position: fixed;
+    z-index: 10;
+    width: 100vw;
+    height: 50vh;
+    top: 0;
+    left: 0;
+    background-color: var.$color-black;
+    box-shadow: 0 0 0 9999px rgba(0, 0, 0, 0.8);
   }
 
   &__item {

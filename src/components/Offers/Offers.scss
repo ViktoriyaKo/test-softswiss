@@ -20,6 +20,10 @@
       padding: 26px;
     }
 
+    @media (max-width: var.$sm) {
+      padding: 44px 28px;
+    }
+
     &-title {
       font-size: 46px;
       font-weight: var.$fontBold;

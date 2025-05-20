@@ -1,4 +1,4 @@
-import "./styles/_index.scss";
+import "./styles/_globals.scss";
 import { Footer, Header, Hero, Journey, Offers } from "./components";
 
 function App() {
