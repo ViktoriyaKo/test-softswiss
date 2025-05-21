@@ -32,7 +32,7 @@ const Offers = () => {
         {cards.map((card) => {
           return (
             <OfferCard
-              image={`../../../public/images/${card.id}.jpg`}
+              image={`./images/${card.id}.jpg`}
               {...card}
               key={card.id}
             />
