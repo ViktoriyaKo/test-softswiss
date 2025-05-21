@@ -2,6 +2,9 @@
 @use 'src/styles/variables' as var;
 @use 'src/styles/mixins' as mixin;
 
+// путь для сборки: ./images/earth.png (для локального не подходит,
+// оставила универсальный, но некрасивый вариант с public)
+
 .hero {
   background-image:
           url('../../../public/images/earth.png'),
@@ -24,7 +27,7 @@
             center;
   }
 
-  @media (max-width: var.$sm) {
+  @media (max-width: var.$m) {
     height: var.$with-heroSM;
     background-position:
             50% -160%,
