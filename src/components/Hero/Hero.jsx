@@ -1,6 +1,6 @@
 import "./Hero.scss";
-import { Button } from "../../ui";
 import HeroTitle from "./HeroTitle";
+import { Button } from "../../ui";
 
 const Hero = () => {
   return (
